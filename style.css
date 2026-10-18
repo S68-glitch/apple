@@ -1,0 +1,651 @@
+
+/* ============ RESET & BASE ============ */
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "SF Pro Display", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background: #fff;
+    color: #1d1d1f;
+    -webkit-font-smoothing: antialiased;
+    height: 100vh;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+
+/* ============ GLOBAL NAVIGATION ============ */
+
+.globalnav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 48px;
+    background: rgba(22, 22, 23, 0.8);
+    backdrop-filter: saturate(180%) blur(20px);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    z-index: 1000;
+}
+
+.globalnav-inner {
+    max-width: 1024px;
+    margin: 0 auto;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 22px;
+}
+
+.globalnav ul {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.globalnav ul li a {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 12px;
+    letter-spacing: 0.01em;
+    transition: color 0.2s;
+}
+
+.globalnav ul li a:hover {
+    color: #fff;
+}
+
+.nav-logo a {
+    display: inline-block;
+    width: 14px;
+    height: 18px;
+    font-size: 18px;
+    line-height: 18px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.nav-icons {
+    display: flex;
+    gap: 36px;
+}
+
+.nav-icons a {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 15px;
+}
+
+.iphonetitle{
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+    padding: 40px;
+    
+}
+.iphonetitle .h1 .p{
+    margin: 20px;
+}
+.iphone-visua{
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+}
+
+/* ============ IPHONE DUO HERO ============ */
+
+.duo-section {
+    position: relative;
+    width: 100%;
+    height: 700px;
+    overflow: hidden;
+    background: #f5f5f7;
+    text-align: center;
+}
+
+/* Large background image */
+
+.duo-section .dueimg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    z-index: 1;
+}
+
+.duo-section .dueimg img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    max-width: none;
+    object-fit: cover;
+    object-position: center top;
+}
+
+/* Text over image */
+
+.duo-section .duetitle {
+    position: relative;
+    z-index: 2;
+    padding: 55px 20px 0;
+    text-align: center;
+}
+
+.duo-section .duetitle h1 {
+    font-size: clamp(40px, 5vw, 56px);
+    font-weight: 600;
+    letter-spacing: -1.5px;
+    color: #1d1d1f;
+    margin-bottom: 8px;
+}
+
+.duo-section .duetitle p {
+    font-size: clamp(18px, 2.2vw, 24px);
+    color: #1d1d1f;
+    margin-bottom: 6px;
+}
+
+/* Buttons */
+
+.duo-section .duebutton {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    margin-top: 20px;
+}
+
+.duo-section .duebutton button {
+    background: #0071e3;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    padding: 12px 22px;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+.duo-section .duebutton button:hover {
+    background: #0077ed;
+}
+
+/* =====purchase card===== */
+
+/* ============ APPLE CARD SECTION ============ */
+
+.applecard {
+    position: relative;
+    width: 100%;
+    height: 650px;
+    overflow: hidden;
+    background: #f5f5f7;
+    text-align: center;
+}
+
+/* Background image */
+
+.applecard-bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.applecard-bg img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    max-width: none;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Logo and text */
+
+.applecardtitle {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 55px 20px 0;
+}
+
+.applecardtitle .applecard-logo {
+    width: 180px;
+    max-width: 60%;
+    height: auto;
+    margin-bottom: 16px;
+    object-fit: contain;
+}
+
+.applecardtitle p {
+    color: #1d1d1f;
+    font-size: 21px;
+    line-height: 1.4;
+    margin-bottom: 20px;
+}
+
+/* Buttons */
+
+.applecard-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
+}
+
+.applecard-buttons button {
+    background: #0071e3;
+    color: #fff;
+    border: 1px solid #0071e3;
+    border-radius: 30px;
+    padding: 11px 21px;
+    font-size: 17px;
+    font-family: inherit;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.applecard-buttons button:hover {
+    background: #0077ed;
+}
+       
+
+/* ============ APPLE PROMO GRID ============ */
+
+.watches {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    width: 100%;
+    padding: 12px;
+    background: #fff;
+}
+
+/* Both cards */
+
+.leftwatch,
+.rightwatch {
+    position: relative;
+    min-width: 0;
+    height: 580px;
+    overflow: hidden;
+    text-align: center;
+    background: #f5f5f7;
+}
+
+/* Image positioning */
+
+.leftwatchtitle,
+.righttitle {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 40px 18px 0;
+}
+
+/* Main images */
+
+.leftwatch > .leftwatchtitle > img:last-child,
+.rightwatch > img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    max-width: none;
+    object-fit: cover;
+    object-position: center;
+    z-index: -1;
+}
+
+/* Logos */
+
+.leftwatchtitle img:first-child,
+.righttitle img:first-child {
+    position: relative;
+    z-index: 3;
+    width: auto;
+    max-width: 75%;
+    max-height: 48px;
+    object-fit: contain;
+    margin-bottom: 12px;
+}
+
+/* Text */
+
+.leftwatchtitle p,
+.righttitle p {
+    position: relative;
+    z-index: 3;
+    color: #1d1d1f;
+    font-size: 19px;
+    line-height: 1.4;
+    margin-bottom: 6px;
+}
+
+/* Buttons */
+
+.leftwatchtitle button,
+.righttitle button {
+    position: relative;
+    z-index: 3;
+    background: #0071e3;
+    color: #fff;
+    border: 1px solid #0071e3;
+    border-radius: 25px;
+    padding: 9px 17px;
+    margin-top: 12px;
+    font-family: inherit;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.leftwatchtitle button:hover,
+.righttitle button:hover {
+    background: #0077ed;
+}
+
+/* Two buttons on right */
+
+.righttitle button + button {
+    margin-top: 8px;
+}
+
+/* ============ TABLET ============ */
+
+@media (max-width: 800px) {
+    .watches {
+        grid-template-columns: 1fr;
+    }
+
+    .leftwatch,
+    .rightwatch {
+        height: 550px;
+    }
+}
+
+/* ============ MOBILE ============ */
+
+@media (max-width: 480px) {
+    .watches {
+        padding: 8px;
+        gap: 8px;
+    }
+
+    .leftwatch,
+    .rightwatch {
+        height: 470px;
+    }
+
+    .leftwatchtitle,
+    .righttitle {
+        padding-top: 32px;
+    }
+
+    .leftwatchtitle p,
+    .righttitle p {
+        font-size: 17px;
+    }
+}
+
+
+
+
+/* ===========apple card media=========== */
+/* Responsive */
+
+@media (max-width: 600px) {
+    .applecard {
+        height: 520px;
+    }
+
+    .applecardtitle {
+        padding-top: 40px;
+    }
+
+    .applecardtitle .applecard-logo {
+        width: 145px;
+    }
+
+    .applecardtitle p {
+        font-size: 17px;
+        max-width: 320px;
+    }
+
+    .applecard-buttons {
+        gap: 10px;
+    }
+
+    .applecard-buttons button {
+        padding: 10px 17px;
+        font-size: 15px;
+    }
+}
+
+
+
+/* due iphone media */
+/* Mobile */
+
+@media (max-width: 600px) {
+    .duo-section {
+        height: 550px;
+    }
+
+    .duo-section .duetitle {
+        padding-top: 40px;
+    }
+
+    .duo-section .duetitle h1 {
+        font-size: 36px;
+    }
+
+    .duo-section .duetitle p {
+        font-size: 18px;
+    }
+
+    .duo-section .dueimg img {
+        object-position: center top;
+    }
+}
+
+
+/* ============ FOOTER ============ */
+
+footer {
+    background: #f5f5f7;
+    padding: 30px 22px 40px;
+}
+
+.footer-inner {
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+.footer-notes {
+    font-size: 12px;
+    color: #6e6e73;
+    line-height: 1.5;
+    padding-bottom: 18px;
+    border-bottom: 1px solid #d2d2d7;
+}
+
+.footer-columns {
+    display: flex;
+    gap: 60px;
+    padding: 20px 0;
+    flex-wrap: wrap;
+}
+
+.footer-columns h5 {
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.footer-columns li a {
+    font-size: 12px;
+    color: #424245;
+    display: inline-block;
+    padding: 4px 0;
+}
+
+.footer-columns li a:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    border-top: 1px solid #d2d2d7;
+    padding-top: 16px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+    font-size: 12px;
+    color: #6e6e73;
+}
+
+.footer-bottom .legal-links a {
+    padding: 0 8px;
+    border-right: 1px solid #d2d2d7;
+}
+
+.footer-bottom .legal-links a:last-child {
+    border: none;
+}
+
+.footer-bottom .legal-links a:hover {
+    text-decoration: underline;
+}
+
+
+/* ============ RESPONSIVE DESIGN ============ */
+
+@media (max-width: 833px) {
+
+    .globalnav-inner {
+        padding: 0 16px;
+    }
+
+    .globalnav ul {
+        gap: 20px;
+    }
+
+    .globalnav ul li:not(.nav-logo) {
+        display: none;
+    }
+
+    .nav-icons {
+        gap: 20px;
+    }
+
+    .hero-title {
+        font-size: 40px;
+    }
+
+    .hero-subtitle {
+        font-size: 21px;
+    }
+
+    .hero-content {
+        padding: 45px 16px 15px;
+    }
+
+    .hero-links a {
+        font-size: 17px;
+        margin: 0 8px;
+    }
+
+    .hero-visual.iphone img {
+        max-height: 340px;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .tile {
+        min-height: 480px;
+    }
+
+    .tile h3 {
+        font-size: 32px;
+    }
+
+    .tile p {
+        font-size: 18px;
+    }
+
+    .carousel .slide {
+        flex: 0 0 80vw;
+        height: 420px;
+    }
+
+    .footer-columns {
+        gap: 30px;
+    }
+}
+
+
+/* ============ SMALL MOBILE SCREENS ============ */
+
+@media (max-width: 480px) {
+
+    .hero-title {
+        font-size: 34px;
+    }
+
+    .hero-subtitle {
+        font-size: 18px;
+    }
+
+    .hero-content {
+        padding-top: 35px;
+    }
+
+    .tile {
+        min-height: 420px;
+        padding: 40px 15px 0;
+    }
+
+    .tile h3 {
+        font-size: 28px;
+    }
+
+    .tile .tile-visual img {
+        object-fit: contain;
+    }
+
+    .carousel .slide {
+        flex-basis: 85vw;
+        height: 350px;
+        padding: 20px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+    }
+}
+
